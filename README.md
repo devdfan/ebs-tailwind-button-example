@@ -14,10 +14,13 @@ Install modules `yarn -f`
 
 > `yarn dev`
 > Run development  
+
 > `yarn build`
 > Run build
+
 > `yarn storybook`
 > Run storybook development  
+
 > `yarn build-storybook`
 > Build storybook
 

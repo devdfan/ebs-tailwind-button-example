@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "rm -rf dist && webpack --mode=production --progress",
-    "start": "webpack --mode=development --watch --progress",
+    "dev": "webpack --mode=development --watch --progress",
     "storybook": "storybook dev -p 9009",
     "build:storybook": "storybook build -o docs-build"
   },
@@ -32,16 +32,10 @@
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.7"
   },
-  "peerDependencies": {
-    "react": ">= 16",
-    "react-dom": ">= 16",
-    "postcss": ">= 8"
-  },
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
     "@babel/preset-react": "^7.18.6",
-    "@storybook/addon-postcss": "^3.0.0-alpha.1",
     "@storybook/builder-webpack5": "^7.0.0-alpha.18",
     "@storybook/manager-webpack5": "^7.0.0-alpha.10",
     "@storybook/preset-create-react-app": "^4.1.2",

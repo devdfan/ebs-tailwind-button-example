@@ -25,12 +25,8 @@
     "build",
     "dist",
     "example",
-    "rollup.config.js",
+    "webpack.config.js",
     ".storybook",
-    "*/throw.ts",
-    "*/setupTests.ts",
-    "*/**/*.stories.@(tsx|mdx)",
     "*/*.stories.@(tsx|mdx)",
-    "*/**/*.types.ts"
   ]
 }

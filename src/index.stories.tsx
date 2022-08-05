@@ -2,24 +2,19 @@ import * as React from 'react';
 
 import { Button, ButtonProps } from '.';
 
-export default {
+const story = {
   title: 'Button',
   component: Button,
 };
+
+export default story;
 
 export const Regular: React.FC<ButtonProps> & { args: ButtonProps } = ({ children, ...props }) => (
   <Button {...props}>{children}</Button>
 );
 
 Regular.args = {
-  type: 'primary',
-  size: 'medium',
+  loading: true,
   children: 'Example',
-  form: '',
-  icon: '',
-  buttonClass: '',
-  loading: false,
-  submit: false,
-  block: false,
   onClick: () => console.log,
 };

@@ -1,48 +1,37 @@
 import * as React from 'react';
 import cn from 'classnames';
 
+import { Loading } from './components';
+
 import './index.css';
 
-export type ButtonSize = 'small' | 'medium' | 'large';
-
-export type ButtonType = 'text' | 'primary' | 'fill' | 'ghost' | 'dark' | 'light';
-
-export interface ButtonProps extends Omit<Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'type'>, 'prefix'> {
-  onClick?: () => void;
-  prefix?: React.ReactNode;
-  size?: ButtonSize;
-  type?: ButtonType;
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   loading?: boolean;
-  submit?: boolean;
-  buttonClass?: string;
-  form?: string;
-  icon?: any;
-  block?: boolean;
-  round?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({
-  submit = false,
-  onClick,
-  prefix,
-  className,
-  buttonClass,
-  size = 'medium',
-  type = 'ghost',
-  icon,
-  loading,
-  block,
-  round,
-  ...props
-}) => {
+export const Button: React.FC<ButtonProps> = ({ loading, disabled, onClick, ...props }) => {
   return (
     <button
-      type={submit ? 'submit' : 'button'}
-      className={cn('bg-sky-600', 'hover:bg-sky-700')}
-      disabled={props.disabled || loading}
+      type="button"
+      className={cn(
+        'flex',
+        'items-center',
+        'gap-1',
+        'p-1',
+        'cursor-pointer',
+        'rounded-md',
+        'hover:bg-indigo-500',
+        'hover:text-white',
+        'bg-white',
+        'dark:bg-slate-800',
+        'text-slate-900',
+        'dark:text-white',
+      )}
+      disabled={disabled || loading}
       {...props}
     >
-      {icon ? icon : props.children}
+      {loading && <Loading />}
+      {props.children}
     </button>
   );
 };

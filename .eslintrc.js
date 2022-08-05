@@ -20,23 +20,5 @@ module.exports = {
       version: 'detect',
     },
   },
-  rules: {
-    'react-hooks/exhaustive-deps': 'off',
-    'react/prop-types': 'off',
-    'react/display-name': 'off',
-    'no-use-before-define': 0,
-    'one-var-declaration-per-line': 'error',
-    '@typescript-eslint/camelcase': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-use-before-define': 0,
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
-    '@typescript-eslint/explicit-function-return-type': [
-      'warn',
-      {
-        allowExpressions: true,
-        allowHigherOrderFunctions: true,
-      },
-    ],
-  },
+  rules: {},
 };
